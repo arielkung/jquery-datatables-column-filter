@@ -347,7 +347,7 @@
                         || escape(aData[j]) == escape(currentFilter)
                         )
                         selected = 'selected '
-                    r += '<option ' + selected + ' value="' + escape(aData[j]) + '">' + aData[j] + '</option>';
+                    r += '<option ' + selected + ' value="' + aData[j].toString().replace(/"/g, '\\"') + '">' + aData[j] + '</option>';
                 }
                 else {
                     var selected = '';
